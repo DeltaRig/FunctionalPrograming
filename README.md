@@ -11,7 +11,7 @@ Instructions for installing GHci on Linux and Windows systems.
 The installation of GHci happens together with the environment stack for the control of packages and projects in Haskell.
 
 Windows
-Installation on Windows System can be done through the package available (here)[https://get.haskellstack.org/stable/windows-x86_64-installer.exe]
+Installation on Windows System can be done through the package available [here](https://get.haskellstack.org/stable/windows-x86_64-installer.exe)
 
 To determine if the installation was successful, you can open a command prompt and test the following command:
 
@@ -27,11 +27,14 @@ If the distribution is not based on Ubuntu, you can run the following commands:
 > wget -qO- https://get.haskellstack.org/ | sh
 
 MacOS
-Information for installing the Haskell environment can be found (here)[https://www.haskell.org/ghcup/]
+Information for installing the Haskell environment can be found [here](https://www.haskell.org/ghcup/)
 
-(More informations)[https://docs.haskellstack.org/en/stable/install_and_upgrade/]
+[More informations](https://docs.haskellstack.org/en/stable/install_and_upgrade/)
 
+## Importing Haskell Files (.sh)
 
+> stack exec -- ghci
+> :load fileName.hs
 
 
 
@@ -45,7 +48,7 @@ Instruções para a instalação do GHCi em sistemas Linux e Windows.
 A instalação do GHCi acontece juntamente com o ambiente stack para o controle de pacotes e projetos em Haskell.
 
 Windows
-A instalação no Sistema Windows pode ser feita através do pacote disponível (aqui)[https://get.haskellstack.org/stable/windows-x86_64-installer.exe]
+A instalação no Sistema Windows pode ser feita através do pacote disponível [aqui](https://get.haskellstack.org/stable/windows-x86_64-installer.exe)
 
 Para determinar se instalação obteve sucesso, você pode abrir o prompt de comando e testar o seguinte comando:
 
@@ -61,6 +64,11 @@ Caso a distribuição não seja baseada em Ubuntu, você poderá executar os seg
 > wget -qO- https://get.haskellstack.org/ | sh
 
 MacOS
-Informações para a instalação do ambiente Haskell podem ser encontradas (aqui)[https://www.haskell.org/ghcup/]
+Informações para a instalação do ambiente Haskell podem ser encontradas [aqui](https://www.haskell.org/ghcup/)
 
-(Mais informações)[https://docs.haskellstack.org/en/stable/install_and_upgrade/]
+[Mais informações](https://docs.haskellstack.org/en/stable/install_and_upgrade/)
+
+## Importando arquivos Haskell (.sh)
+
+> stack exec -- ghci
+> :load fileName.hs
