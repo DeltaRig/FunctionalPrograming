@@ -24,6 +24,7 @@ If the distribution is based on Ubuntu, you can run the following command:
 If the distribution is not based on Ubuntu, you can run the following commands:
 
 >sudo apt-get install wget
+
 > wget -qO- https://get.haskellstack.org/ | sh
 
 MacOS
@@ -34,6 +35,7 @@ Information for installing the Haskell environment can be found [here](https://w
 ## Importing Haskell Files (.sh)
 
 > stack exec -- ghci
+
 > :load fileName.hs
 
 
@@ -61,6 +63,7 @@ Caso a distribuição seja baseada em Ubuntu, você poderá executar o seguinte 
 Caso a distribuição não seja baseada em Ubuntu, você poderá executar os seguintes comandos:
 
 > sudo apt-get install wget
+
 > wget -qO- https://get.haskellstack.org/ | sh
 
 MacOS
@@ -71,4 +74,5 @@ Informações para a instalação do ambiente Haskell podem ser encontradas [aqu
 ## Importando arquivos Haskell (.sh)
 
 > stack exec -- ghci
+
 > :load fileName.hs
