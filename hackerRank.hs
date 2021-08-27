@@ -8,3 +8,8 @@ hello_worlds n = do
 fib n = last $ take n fibs
     where fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
 
+-- move all of the characters that occurred previously in the string
+--strReduction = foldl reduction "" 
+--reduction x y |elem y x = x
+--              |otherwise = y:x
+-- foldl be a comparation starting in left

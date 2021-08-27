@@ -1,5 +1,8 @@
 Traduzido em inglês e português
+
 Translated in english and portuguese
+
+
 
 # Functional Programing
 
