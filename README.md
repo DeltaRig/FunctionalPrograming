@@ -13,14 +13,14 @@ Starting learning functional programing
 Instructions for installing GHci on Linux and Windows systems.
 The installation of GHci happens together with the environment stack for the control of packages and projects in Haskell.
 
-Windows
+**Windows**
 Installation on Windows System can be done through the package available [here](https://get.haskellstack.org/stable/windows-x86_64-installer.exe)
 
 To determine if the installation was successful, you can open a command prompt and test the following command:
 
 > stack exec -- ghci
 
-Linux
+**Linux**
 If the distribution is based on Ubuntu, you can run the following command:
 > sudo apt-get install ghc
 
@@ -30,7 +30,7 @@ If the distribution is not based on Ubuntu, you can run the following commands:
 
 > wget -qO- https://get.haskellstack.org/ | sh
 
-MacOS
+**MacOS**
 Information for installing the Haskell environment can be found [here](https://www.haskell.org/ghcup/)
 
 [More informations](https://docs.haskellstack.org/en/stable/install_and_upgrade/)
