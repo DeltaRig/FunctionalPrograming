@@ -8,26 +8,30 @@
 -- (c) casamento de padrões.
 -- Dica: a função padrão null :: [a] -> Bool
 -- pode ser usada para testar se um lista é vazia.
-
--- c. Dê três definições para o operador lógico ou
--- (||) usando casamento de padrões.
+safetail :: [a] -> [a]
+safetail xs = if null xs then [] else tail xs
 
 -- d. Redefina a versão abaixo de (&&) usando
 -- condicionais ao invés de padrões:
 -- 1 True && True = True
 -- 2 _ && _ = False
+andd :: Bool -> Bool -> Bool
+andd a b = if a && b
+        then True
+        else False
+
+or' :: Bool -> Bool -> Bool
+or' a b = if a
+        then True
+        else if b
+        then True
+        else False
 
 -- e. Mostre que a função currificada abaixo
 -- pode ser formalizada através de expressões
 -- lambda.
 -- 1 mult :: Int -> Int -> Int -> Int
 -- 2 mult x y z = x*y*z
-
-
-
-
-
-
 
 
 
@@ -69,7 +73,8 @@ safetailC :: [a] -> [a]
 safetailC []     = []
 safetailC (x:xs) = xs
 
--- exercicio a
+-- c. Dê três definições para o operador lógico ou
+-- (||) usando casamento de padrões.
 or' False False = False
 or' False True  = True
 or' True  False = True
