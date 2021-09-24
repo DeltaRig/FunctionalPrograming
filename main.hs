@@ -43,3 +43,8 @@ length' :: [Int] -> Int
 length' = foldr (\_ n -> 1 + n) 0
 
 
+-- ideia questão 6 trabalho 1
+l = [1,2,3,4]
+zip l (tail l)
+-- [(1,2),(2,3),(3,4)]
+-- fazer and do resultado
