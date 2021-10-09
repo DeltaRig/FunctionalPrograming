@@ -13,3 +13,4 @@ fib n = last $ take n fibs
 --reduction x y |elem y x = x
 --              |otherwise = y:x
 -- foldl be a comparation starting in left
+
