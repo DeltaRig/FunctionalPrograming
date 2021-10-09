@@ -41,3 +41,4 @@ foldr' f v (x:xs) = f x (foldr' f v xs)
 
 length' :: [Int] -> Int
 length' = foldr (\_ n -> 1 + n) 0
+

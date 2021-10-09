@@ -28,10 +28,10 @@ halve xs = splitAt (length xs `div` 2) xs
 
 
 -- recebe uma lista e transforma em uma arvore balanceada
-balance :: [a] -> Tree a
-balance [x] = Leaf x
-balance xs = Node (balance ys)(balance zs)
-            where (ys, zs) = halve xs
+--balance' :: [a] -> Tree a
+--balance' [x] = Leaf x
+--balance' xs = Node (balance' ys)(balance' zs)
+--            where (ys, zs) = halve xs
 
 -- balance [1,2,3,4,5]
 -- Node (balance [1,2,3]) (balance [4,5])

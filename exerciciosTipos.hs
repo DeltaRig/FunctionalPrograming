@@ -1,6 +1,52 @@
--- 1. De forma similar à função add, defina uma função mult :: Nat -> Nat -> Nat para o tipo recursivo
+type Pair a = (a,a)
+
+mult :: Pair Int -> Int
+mult (m,n) = m*n
+
+copy :: a -> Pair a
+copy x = (x,x) 
+
+data Boolean = True | False
+
+data Answer = Yes | No | Unknown
+
+answers :: [Answer]
+answers = [Yes,No,Unknown]
+
+flip' :: Answer -> Answer
+flip' Yes = No
+flip' No = Yes
+flip' Unknown = Unknown 
+
+-- recursive data
+-- Nat = Natural Numbers
+data Nat = Zero | Succ Nat 
+
+nat2int :: Nat -> Int
+nat2int Zero = 0
+nat2int (Succ n) = 1 + nat2int n
+
+int2nat :: Int -> Nat
+int2nat 0 = Zero
+int2nat n = Succ (int2nat (n-1))
+
+add :: Nat -> Nat -> Nat
+add m n = int2nat (nat2int m + nat2int n)
+
+add' Zero n = n
+add' (Succ m) n = Succ (add' m n) 
+
+-- 1. De forma similar à função add, defina uma função t :: Nat -> Nat -> Nat para o tipo recursivo
 -- de números naturais. Dica: Faça o uso da função
 -- add na sua definição.
+mult' (Succ Zero) n = n
+mult' (Succ m) n = Succ (mult' m n)
+
+-- e sem recursividade
+mult'' :: Nat -> Nat -> Nat
+mult'' m n = int2nat (nat2int m * nat2int n)
+
+
 
 -- 2. O arquivo de prelúdio de Haskell define o tipo
 ----data Ordering = LT | EQ | GT
