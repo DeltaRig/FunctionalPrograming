@@ -61,7 +61,7 @@ occurs x (Leaf y) = (compare x y) == (compare 1 1)
 occurs x (Node l y r) = (compare x y) == (compare 1 1) || occurs x l || occurs x r
 
 
-data Tree a = Leaf a | Node (Tree a) a (Tree a)
+data Tree a = Nil | Leaf a | Node (Tree a) a (Tree a)
 
 t0 :: Tree Int
 t0 = Node (Leaf 1) 5 (Leaf 6)
@@ -112,13 +112,17 @@ middle xs    = middle $ init $ tail xs
 remove :: Eq a => a -> [a] -> [a]
 remove element list = filter (\e -> e/=element) list
 
--- meu problema nesse exercicio é que os nodos e as folhas tem que ser do mesmo tipo, mas eu tenho uma lista que vai virar In
--- para gerar árvores binaria com elementos nos nodos e nas folhas a partir de listas
---balance' :: [a] -> Tree a
---balance' [x] = Leaf x
---balance' (xs) = Node (balance' ys) (xs!!((length xs `div` 2)-1)) (balance' zs)
---            where
---            (ys, zs) = halve ([0..(length xs `div` 2)-1] ++ [(length xs `div` 2)+1..(length xs -1)])
+-- árvores binarias com elementos nos nodos e nas folhas
+treeToList :: Tree a -> [a]
+treeToList (Nil)        = []
+treeToList (Leaf x)     = [x]
+treeToList (Node l x r) = treeToList(l) ++ [x] ++ treeToList(r)
+
+-- Assumindo que a lista descreva um caminhamento em pré-ordem.
+--listToTree :: [a] -> Tree a
+--listToTree []     = Nil
+--listToTree [x]    = Leaf x
+--listToTree (x:xs) = ?
 
 
 -- 4.2 Receber uma árvore a achatar ela numa lista
